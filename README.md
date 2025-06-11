@@ -1,11 +1,11 @@
-# Chatbot - Poliedro [Front-end]
+# Bem-vindo à Organização PI-2025-ChatBot! [Front-End]
 
-# Autoria
-- Mitchell Santana Miyake, 23.10270-5 
-- Enrico Orlando Bernardi de Oliveira, 23.01355-9 
-- Arthur Baptista Falzetta, 23.00800-8 
-- Murilo Sucupira Sacchi, 23.10260-8 
-- Ramon Santos Pereira, 22.00049-6 
-- Caue de Oliveira Almiron, 24.01734-5
+Esta organização abriga o projeto desenvolvido pelos alunos do 3º semestre do curso de Ciências da Computação do **Instituto Mauá de Tecnologia (IMT)**, como parte do Projeto Interdisciplinar Integrador (PII).
 
-# Sobre
+-   **Alunos**:
+    -   Arthur Baptista Falzetta - RA: 23.00800-8  
+    -   Cauê de Oliveira Almiron - RA: 24.01734-5 
+    -   Enrico Orlando Bernardi de Oliveira - RA: 23.01355-9 
+    -   Mitchell Santana Miyake - RA: 23.10270-5
+    -   Murilo Sucupira Sacchi - RA: 23.10260-8
+    -   Ramon Santos Pereira - RA: 22.00049-6 
