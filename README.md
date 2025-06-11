@@ -9,3 +9,10 @@ Esta organização abriga o projeto desenvolvido pelos alunos do 3º semestre do
     -   Mitchell Santana Miyake - RA: 23.10270-5
     -   Murilo Sucupira Sacchi - RA: 23.10260-8
     -   Ramon Santos Pereira - RA: 22.00049-6 
+
+---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/IMT-PII-3-Semestre/chatbot-poliedro/main/images/logo-IMT.png" width="150" alt="Logo IMT">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/IMT-PII-3-Semestre/chatbot-poliedro/main/images/logo-poliedro-se.png" width="150" alt="Logo Poliedro SE">
+</p>
