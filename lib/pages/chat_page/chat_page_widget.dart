@@ -146,7 +146,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
             ),
             Container(
               width: double.infinity,
-              height: MediaQuery.sizeOf(context).height * 0.85,
+              height: MediaQuery.sizeOf(context).height * 0.847,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,
