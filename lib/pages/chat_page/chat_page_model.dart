@@ -1,9 +1,9 @@
 import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:async';
 import '/index.dart';
 import 'chat_page_widget.dart' show ChatPageWidget;
+import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ChatPageModel extends FlutterFlowModel<ChatPageWidget> {

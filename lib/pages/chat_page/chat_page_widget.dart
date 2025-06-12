@@ -3,9 +3,9 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:async';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -146,7 +146,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
             ),
             Container(
               width: double.infinity,
-              height: MediaQuery.sizeOf(context).height * 0.847,
+              height: MediaQuery.sizeOf(context).height * 0.85,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,
@@ -190,6 +190,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
 
                   return ListView.builder(
                     padding: EdgeInsets.zero,
+                    primary: false,
                     scrollDirection: Axis.vertical,
                     itemCount: listViewMensagensRowList.length,
                     itemBuilder: (context, listViewIndex) {
@@ -222,7 +223,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               listViewMensagensRow
@@ -418,7 +419,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
             ),
             Container(
               width: double.infinity,
-              height: MediaQuery.sizeOf(context).height * 0.08,
+              height: MediaQuery.sizeOf(context).height * 0.075,
               decoration: BoxDecoration(
                 color: Color(0xFFED2152),
                 borderRadius: BorderRadius.only(
@@ -569,17 +570,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                               });
                               safeSetState(
                                   () => _model.requestCompleter = null);
-                              await _model.waitForRequestCompleted();
-                              unawaited(
-                                () async {
-                                  await _model.listViewController?.animateTo(
-                                    _model.listViewController!.position
-                                        .maxScrollExtent,
-                                    duration: Duration(milliseconds: 100),
-                                    curve: Curves.ease,
-                                  );
-                                }(),
-                              );
+                              await _model.waitForRequestCompleted(
+                                  minWait: 500);
                               _model.apiResult = await BotApiCall.call(
                                 from: widget.userEmail,
                                 body:
@@ -590,35 +582,16 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                                 _model.mensagemTextFieldTextController?.clear();
                               });
                               if ((_model.apiResult?.succeeded ?? true)) {
-                                unawaited(
-                                  () async {
-                                    await _model.listViewController?.animateTo(
-                                      _model.listViewController!.position
-                                          .maxScrollExtent,
-                                      duration: Duration(milliseconds: 100),
-                                      curve: Curves.ease,
-                                    );
-                                  }(),
-                                );
                                 await MensagensTable().insert({
                                   'texto_mensagem': functions.extrairBodyText(
                                       (_model.apiResult?.bodyText ?? '')),
                                   'e_bot': true,
                                   'user_email': widget.userEmail,
                                 });
-                                unawaited(
-                                  () async {
-                                    await _model.listViewController?.animateTo(
-                                      _model.listViewController!.position
-                                          .maxScrollExtent,
-                                      duration: Duration(milliseconds: 100),
-                                      curve: Curves.ease,
-                                    );
-                                  }(),
-                                );
                                 safeSetState(
                                     () => _model.requestCompleter = null);
-                                await _model.waitForRequestCompleted();
+                                await _model.waitForRequestCompleted(
+                                    minWait: 500);
                               } else {
                                 await showDialog(
                                   context: context,
@@ -639,17 +612,6 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                                   },
                                 );
                               }
-
-                              unawaited(
-                                () async {
-                                  await _model.listViewController?.animateTo(
-                                    _model.listViewController!.position
-                                        .maxScrollExtent,
-                                    duration: Duration(milliseconds: 100),
-                                    curve: Curves.ease,
-                                  );
-                                }(),
-                              );
                             } else {
                               await showDialog(
                                 context: context,
